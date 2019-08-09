@@ -1,0 +1,10 @@
+{
+  "name": "gulu",
+  "version": "0.0.1",
+  "description": "我的UI框架",
+  "main": "index.js",
+  "repository": "git@github.com:tt939242551/vue-gulu.git",
+  "author": "xulei <939242551@qq.com>",
+  "license": "MIT",
+  "private": false
+}
