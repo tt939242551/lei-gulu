@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>我的UI组件</title>
   <style>
     *{
       margin: 0px;
@@ -19,6 +19,7 @@
       --font-size: 14px;
       --button-bg: white;
       --button-active-bg: #eee;
+      --button-disabled-bg: #d8d8d8;
       --border-radius: 4px;
       --color: #333;
       --border-color: #999;
@@ -34,6 +35,9 @@
 
     <div class="box">
       <g-button :loading="loading1" @click="loading1 = !loading1">
+        按钮
+      </g-button>
+      <g-button :disabled="true" @click="loading1 = !loading1">
         按钮
       </g-button>
       <g-button icon="setting" :loading="loading2"

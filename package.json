@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "chai": "^4.2.0",
+    "sinon": "^7.4.1",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
