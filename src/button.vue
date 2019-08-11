@@ -58,13 +58,13 @@
     &:active { background-color: var(--button-active-bg); }
     &:focus { outline: none; }
     > .content { order: 2; }
-    > .icon { order: 1; margin-right: .4em; }
+    > .icon { order: 1; margin-right: .3em; }
     &.icon-right {
       > .content { order: 1; }
-      > .icon { order: 2; margin-right: 0; margin-left: .4em;}
+      > .icon { order: 2; margin-right: 0; margin-left: .3em;}
     }
     .loading {
-      animation: spin 2s infinite linear;
+      animation: spin 1.2s infinite linear;
     }
   }
   .disabled { background-color: var(--button-disabled-bg) }

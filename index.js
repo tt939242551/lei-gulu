@@ -3,4 +3,4 @@ import ButtonGroup from './src/button-group'
 import Icon from './src/icon'
 
 
-export {ButtonGroup, Button, Icon}
+export {Button , ButtonGroup , Icon}
