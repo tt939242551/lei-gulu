@@ -1,8 +1,8 @@
 {
   "name": "lei-gulu-test-1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "我的UI框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:tt939242551/vue-gulu.git",
   "author": "xulei <939242551@qq.com>",
   "license": "MIT",
