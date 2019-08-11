@@ -32,7 +32,9 @@
 </head>
 <body>
   <div id="app">
-
+    <g-input v-model="message"></g-input>
+    <p>{{message}}</p>
+    <button @click="message+=1">+1</button>
     <div class="box">
       <g-button :loading="loading1" @click="loading1 = !loading1">
         按钮

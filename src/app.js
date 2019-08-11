@@ -1,11 +1,11 @@
-
+import Input from './input'
 import Vue from 'vue'
 import Button from './button'
 import ButtonGroup from './button-group'
 
 Vue.component('g-button', Button)
 Vue.component('g-button-group', ButtonGroup)
-
+Vue.component('g-input', Input)
 
 new Vue({
   el:"#app",
@@ -13,5 +13,6 @@ new Vue({
     loading1: false,
     loading2: true,
     loading3: false,
+    message: 'hi'
   },
 })
