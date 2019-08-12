@@ -5,11 +5,11 @@
       @input="$emit('input', $event.target.value)"
       @focus="$emit('focus', $event.target.value)"
       @blur="$emit('blur', $event.target.value)"
-    >
-    <template v-if="error">
-      <icon name="error" class="icon-error"></icon>
-      <span class="errorMessage">{{error}}</span>
-    </template>
+    >  
+    <icon v-if="state===false&&state!==''" name="error" class="icon"></icon>
+    <icon v-if="state===true" name="pass" class="icon"></icon>
+    <div v-if="error" class="errorMessage" :class="{'under':errorPosition==='bottom'}">{{error}}</div>
+    
   </div>
 </template>
 <script>
@@ -29,8 +29,15 @@
         type: Boolean,
         default: false
       },
+      state: {
+        type: Boolean,
+      },
       error: {
         type: String
+      },
+      errorPosition: {
+        type: String,
+        default: 'right'
       }
     }
   }
@@ -44,7 +51,7 @@
   $box-shadow-color: rgba(0, 0, 0, 0.5);
   $red: #F1453D;
   .wrapper { font-size: $font-size; display: inline-flex;
-    align-items: center;
+    align-items: center;position: relative;
     > :not(:last-child) {margin-right: .5em; }
     > input { height: 32px; border: 1px solid $border-color;
      border-radius: 4px; padding: 0 8px; font-size: inherit;
@@ -53,10 +60,12 @@
        outline: none; }
       &[disabled], &[readonly] {border-color: #bbb;color: #bbb;cursor: not-allowed; }
     }
+    > .icon {font-size: 1.3em}
     &.error {
       > input { border-color: $red; }
     }
     .icon-error { fill: $red; }
     .errorMessage { color: $red; }
+    > .under {position: absolute;top: $height+2px;}
   }
 </style>

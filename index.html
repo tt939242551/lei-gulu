@@ -11,9 +11,10 @@
       padding: 0px;
       box-sizing: border-box;
     }
-    #app,.box{
+    .box{
       margin: 20px;
     }
+    .box > input,.box>button{ margin: 10px;}
     body {
       font-size: var(--font-size);
     }
@@ -21,7 +22,11 @@
 </head>
 <body>
   <div id="app">
-      <g-input></g-input>
+    <div class="box">
+      <g-input  error="密码太短"></g-input>
+      <g-input :state="true"></g-input>
+      <g-input error-position="bottom" :state="false" error="密码太短"></g-input>
+    </div>
     <div class="box">
       <g-button :loading="loading1" number="9" @click="loading1 = !loading1">
         按钮

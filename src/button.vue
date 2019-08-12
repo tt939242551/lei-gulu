@@ -82,7 +82,7 @@
       > .icon { order: 2; margin-right: 0; margin-left: .3em;}
     }
     .loading {
-      animation: spin 1.2s infinite linear;
+      animation: spin 1.3s infinite linear;
     }
   }
   .disabled { background-color: $button-disabled-bg ;

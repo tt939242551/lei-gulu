@@ -46,7 +46,15 @@ describe('Input', () => {
       const inputElement = vm.$el.querySelector('input')
       expect(inputElement.readOnly).to.equal(true)
     })
-
+    it('接收 state', () => {
+      vm = new Constructor({
+        propsData: {
+          state: true
+        }
+      }).$mount()
+      const useElement = vm.$el.querySelector('use')
+      expect(useElement.getAttribute('xlink:href')).to.equal('#i-pass')
+    })
     it('接收 error', () => {
       vm = new Constructor({
         propsData: {
@@ -57,6 +65,16 @@ describe('Input', () => {
       expect(useElement.getAttribute('xlink:href')).to.equal('#i-error')
       const errorMessage = vm.$el.querySelector('.errorMessage')
       expect(errorMessage.innerText).to.equal('你错了')
+    })
+    it('接收 errorPosition', () => {
+      vm = new Constructor({
+        propsData: {
+          errorPosition: 'bottom',
+          error: '你错了'
+        }
+      }).$mount()
+      const errorMessage = vm.$el.querySelector('.errorMessage')
+      expect(errorMessage.getAttribute('class')).to.equal('errorMessage under')
     })
   })
   describe('事件', () => {
