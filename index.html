@@ -11,19 +11,8 @@
       padding: 0px;
       box-sizing: border-box;
     }
-    #app{
-      margin: 20px
-    }
-    html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --button-disabled-bg: #d8d8d8;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
+    #app,.box{
+      margin: 20px;
     }
     body {
       font-size: var(--font-size);
@@ -32,12 +21,12 @@
 </head>
 <body>
   <div id="app">
-    <g-input v-model="message"></g-input>
-    <p>{{message}}</p>
-    <button @click="message+=1">+1</button>
+      <g-input></g-input>
     <div class="box">
-      <g-button :loading="loading1" @click="loading1 = !loading1">
+      <g-button :loading="loading1" number="9" @click="loading1 = !loading1">
         按钮
+      </g-button>
+      <g-button number="6" icon="setting">
       </g-button>
       <g-button :disabled="true" @click="loading1 = !loading1">
         按钮

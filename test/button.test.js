@@ -6,11 +6,11 @@ Vue.config.productionTip = false
 Vue.config.devtools = false
 
 describe('Button', () => {
+  const Constructor = Vue.extend(Button)
   it('存在.', () => {
     expect(Button).to.be.ok
   })
   it('可以设置icon.', () => {
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: 'setting'
@@ -20,8 +20,27 @@ describe('Button', () => {
     expect(useElement.getAttribute('xlink:href')).to.equal('#i-setting')
     vm.$destroy()
   })
+  it('可以设置radius-icon.', () => {
+    const vm = new Constructor({
+      propsData: {
+        icon: 'setting'
+      }
+    }).$mount()
+    const useElement = vm.$el.querySelector('.content')
+    expect(useElement.innerText).to.equal('')
+    vm.$destroy()
+  })
+  it('可以设置number.', () => {
+    const vm = new Constructor({
+      propsData: {
+        number: '6'
+      }
+    }).$mount()
+    const useElement = vm.$el.querySelector('span')
+    expect(useElement.innerText).to.equal('6')
+    vm.$destroy()
+  })
   it('可以设置loading.', () => {
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: 'setting',
@@ -34,20 +53,18 @@ describe('Button', () => {
     vm.$destroy()
   })
   it('可以设置disabled.', () => {
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: "setting",
         disabled: true
       }
     }).$mount()
-    expect(vm.$el.getAttribute("class")).to.equal("g-button icon-left disabled")
+    expect(vm.$el.getAttribute("class")).to.equal("g-button icon-left disabled radius-icon")
     vm.$destroy()
   })
   it('icon 默认的 order 是 1', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: 'setting',
@@ -61,7 +78,6 @@ describe('Button', () => {
   it('设置 iconPosition 可以改变 order', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: 'setting',
@@ -74,13 +90,11 @@ describe('Button', () => {
     vm.$destroy()
   })
   it('点击 button 触发 click 事件', () => {
-    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
       propsData: {
         icon: 'setting',
       }
     }).$mount()
-
     const callback = sinon.fake();
     vm.$on('click', callback)
     vm.$el.click()
