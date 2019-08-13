@@ -40,6 +40,7 @@
         default: false
       },
       number: {
+        type: Number
       },
       iconPosition: {
         type: String,
@@ -76,7 +77,7 @@
     > .b-number {background: #fe5151;border-radius: 50%;height: 1.4em;
     width: 1.4em;line-height: 1.4em;color: #fff;position: absolute;top:-0.7em;right: -0.7em;}
     > .content { order: 2; }
-    > .icon { order: 1; margin: 0 .3em; }
+    > .icon { order: 1; margin-right: .3em;}
     &.icon-right {
       > .content { order: 1; }
       > .icon { order: 2; margin-right: 0; margin-left: .3em;}
@@ -84,10 +85,13 @@
     .loading {
       animation: spin 1.3s infinite linear;
     }
+    &.radius-icon {height: 2em; padding: 0 0.2em;border-radius: 50%;
+      > .icon {margin: .3em;}
+    }
   }
   .disabled { background-color: $button-disabled-bg ;
     &:hover { border-color: $border-color; }
     &:active { background-color: $button-disabled-bg; }
   }
-  .radius-icon {height: 2em; padding: 0 0.2em;border-radius: 50%;}
+  
 </style>

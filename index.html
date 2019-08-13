@@ -18,20 +18,62 @@
     body {
       font-size: var(--font-size);
     }
+    .item {height: 30px;border: 1px solid red}
   </style>
 </head>
 <body>
   <div id="app">
+    <div class="box">
+      <g-row gutter="20" >
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        ></g-col>
+      </g-row>
+      <g-row  gutter="20">
+        <g-col class="item" span="6"  
+        :ipad="{span:5}"
+        :narrow-pc="{span:4}" 
+        :pc="{span:3}"
+        :wide-pc="{span:2}"
+        ></g-col>
+        <g-col class="item" span="17" 
+        :ipad="{span:18}"
+        :narrow-pc="{span:19}" 
+        :pc="{span:20}"
+        :wide-pc="{span:21}" offset="1"></g-col>
+      </g-row>
+    </div>
     <div class="box">
       <g-input  error="密码太短"></g-input>
       <g-input :state="true"></g-input>
       <g-input error-position="bottom" :state="false" error="密码太短"></g-input>
     </div>
     <div class="box">
-      <g-button :loading="loading1" number="9" @click="loading1 = !loading1">
+      <g-button :loading="loading1" :number="9" @click="loading1 = !loading1">
         按钮
       </g-button>
-      <g-button number="6" icon="setting">
+      <g-button :number="6" icon="setting">
       </g-button>
       <g-button :disabled="true" @click="loading1 = !loading1">
         按钮

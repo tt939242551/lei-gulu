@@ -59,7 +59,7 @@ describe('Button', () => {
         disabled: true
       }
     }).$mount()
-    expect(vm.$el.getAttribute("class")).to.equal("g-button icon-left disabled radius-icon")
+    expect(vm.$el.classList.contains('disabled')).to.equal(true)
     vm.$destroy()
   })
   it('icon 默认的 order 是 1', () => {
