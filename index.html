@@ -92,6 +92,36 @@
         <g-button icon="right" icon-position="right">下一页</g-button>
       </g-button-group>
     </div>
+    <div class="box"> 
+      <g-tabs selected="1">
+        <g-tabs-head>
+          <template slot="actions">
+            <g-button>设置</g-button>
+          </template>
+          <g-tabs-item name="1">
+            <g-icon name="setting"></g-icon><span>美女</span>
+          </g-tabs-item>
+          <g-tabs-item name="2">
+            <g-icon name="setting"></g-icon><span>财经</span>
+          </g-tabs-item>
+          <g-tabs-item name="3">
+            <g-icon name="setting"></g-icon><span>体育</span>
+          </g-tabs-item>
+        </g-tabs-head>
+        <g-tabs-body>
+          <g-tabs-pane name="1">
+            美女相关资讯
+          </g-tabs-pane>
+          <g-tabs-pane name="2">
+            财经相关资讯
+          </g-tabs-pane>
+          <g-tabs-pane name="3">
+            体育相关资讯
+          </g-tabs-pane>
+        </g-tabs-body>
+    </g-tabs>
+  </div>
+   
   </div>
   <script src="./src/app.js"></script>
 </body>

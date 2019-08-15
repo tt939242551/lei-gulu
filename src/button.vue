@@ -53,7 +53,6 @@
   }
 </script>
 <style lang="scss" scoped>
-      $button-height: 32px;
       $font-size: 14px;
       $button-bg: white;
       $button-active-bg: #eee;
@@ -65,7 +64,7 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  .g-button { font-size: $font-size; height: $button-height; 
+  .g-button { font-size: $font-size; height: 2.3em; 
     padding: 0 1em;
     border-radius: .3em; border: 1px solid $border-color;
     background: $button-bg;
