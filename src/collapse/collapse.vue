@@ -14,7 +14,7 @@
         default: false
       },
       selected: {
-        type: String,
+        type:[Number, String]
       }
     },
     data () {

@@ -9,7 +9,7 @@
     name: 'GuluTabs',
     props: {
       selected: {
-        type: String||Number,
+        type: [Number, String],
         required: true
       },
     },

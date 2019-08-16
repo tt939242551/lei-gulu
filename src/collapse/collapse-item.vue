@@ -20,7 +20,7 @@
         required: true
       },
       name: {
-        type: String,
+        type: [Number, String],
         required: true
       }
     },

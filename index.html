@@ -93,7 +93,7 @@
       </g-button-group>
     </div>
     <div class="box"> 
-      <g-tabs selected="1">
+      <g-tabs :selected="1">
         <g-tabs-head>
           <template slot="actions">
             <g-button>设置</g-button>
@@ -122,10 +122,10 @@
     </g-tabs>
   </div>
   <div class="box">
-    <g-collapse selected="2" :single="true">
-      <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
-      <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
-      <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
+    <g-collapse :selected="2">
+      <g-collapse-item title="标题1" :name="1">内容1</g-collapse-item>
+      <g-collapse-item title="标题2" :name="2">内容2</g-collapse-item>
+      <g-collapse-item title="标题3" :name="3">内容3</g-collapse-item>
     </g-collapse>
   </div>
    
