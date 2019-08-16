@@ -13,6 +13,7 @@
     }
     .box{
       margin: 20px;
+      margin-top: 50px;
     }
     .box > input,.box>button{ margin: 10px;}
     body {
@@ -24,32 +25,6 @@
 <body>
   <div id="app">
     <div class="box">
-      <g-row gutter="20" >
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-      </g-row>
       <g-row  gutter="20">
         <g-col class="item" span="6"  
         :ipad="{span:5}"
@@ -98,35 +73,65 @@
           <template slot="actions">
             <g-button>设置</g-button>
           </template>
-          <g-tabs-item name="1">
+          <g-tabs-item :name="1">
             <g-icon name="setting"></g-icon><span>美女</span>
           </g-tabs-item>
-          <g-tabs-item name="2">
+          <g-tabs-item :name="2">
             <g-icon name="setting"></g-icon><span>财经</span>
           </g-tabs-item>
-          <g-tabs-item name="3">
+          <g-tabs-item :name="3">
             <g-icon name="setting"></g-icon><span>体育</span>
           </g-tabs-item>
         </g-tabs-head>
         <g-tabs-body>
-          <g-tabs-pane name="1">
+          <g-tabs-pane :name="1">
             美女相关资讯
           </g-tabs-pane>
-          <g-tabs-pane name="2">
+          <g-tabs-pane :name="2">
             财经相关资讯
           </g-tabs-pane>
-          <g-tabs-pane name="3">
+          <g-tabs-pane :name="3">
             体育相关资讯
           </g-tabs-pane>
         </g-tabs-body>
     </g-tabs>
   </div>
   <div class="box">
-    <g-collapse :selected="2">
+    <g-collapse :selected="2" single>
       <g-collapse-item title="标题1" :name="1">内容1</g-collapse-item>
       <g-collapse-item title="标题2" :name="2">内容2</g-collapse-item>
       <g-collapse-item title="标题3" :name="3">内容3</g-collapse-item>
     </g-collapse>
+  </div>
+  <div class="box" style="margin-top: 100px">
+    <g-popover position="bottom">
+      <template slot="content" slot-scope="{close}">
+        <div>文字</div>
+        <div>popover <a href="http://qq.com">看新网</a> 内容</div>
+        <g-button @click="close">关闭</g-button>
+      </template>
+      <g-button>点我</g-button>
+    </g-popover>
+    <g-popover position="top">
+      <template slot="content">
+        <div>popover内容
+          <g-button>关闭</g-button>
+        </div>
+      </template>
+      <g-button>点我</g-button>
+    </g-popover>
+    <g-popover position="left" trigger="hover">
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <g-button>点我</g-button>
+    </g-popover>
+    <g-popover position="right" trigger="hover">
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <g-button>点我</g-button>
+    </g-popover>
   </div>
    
   </div>
