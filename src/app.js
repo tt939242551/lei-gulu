@@ -15,7 +15,11 @@ import TabsHead from './tabs/tabs-head'
 import TabsBody from './tabs/tabs-body'
 import TabsItem from './tabs/tabs-item'
 import TabsPane from './tabs/tabs-pane'
+import Collapse from './collapse/collapse'
+import CollapseItem from './collapse/collapse-item'
 
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
 Vue.component('g-button', Button)
 Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
