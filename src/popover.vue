@@ -1,9 +1,12 @@
 <template>
   <div class="popover" ref="popover">
-    <div ref="contentWrapper" class="content-wrapper" v-if="visible"
+    <transition name="contents">
+      <div ref="contentWrapper" class="content-wrapper" v-if="visible"
       :class="{[`position-${position}`]:true}">
-      <slot name="content" :close="close"></slot>
-    </div>
+        <slot name="content" :close="close"></slot>
+      </div>
+    </transition>
+    
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
     </span>
@@ -195,5 +198,11 @@
         right: calc(100% - 1px);
       }
     }
+  }
+  .contents-enter-active, .contents-leave-active {
+    transition: opacity .5s;
+  }
+  .contents-enter, .contents-leave-to  {
+    opacity: 0;
   }
 </style>
