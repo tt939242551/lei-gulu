@@ -19,6 +19,7 @@ import Collapse from './collapse/collapse'
 import CollapseItem from './collapse/collapse-item'
 import Popover from './popover'
 import Paginator from './paginator'
+import Address from './address/address'
 
 Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
@@ -40,17 +41,22 @@ Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-popover', Popover)
 Vue.component('g-paginator', Paginator)
+Vue.component('g-address', Address)
 new Vue({
   el:"#app",
   data: {
     loading1: false,
     loading2: true,
     loading3: false,
-    page: 1
+    page: 1,
+    address: null,
   },
   methods:{
     xxx(page){
       this.page = page
+    },
+    yyy(data){
+      this.address = data
     }
   }
 })
