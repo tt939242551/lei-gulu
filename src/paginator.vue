@@ -3,12 +3,12 @@
   <button @click="firstbtn">首页</button>
   <button @click="prevbtn">上一页</button>
   <button v-if="pagebtnlist[0]!==1" class="pagebtn">.....</button>
-  <button v-for="(btn,index) in pagebtnlist"
+  <button v-for="btn in pagebtnlist"
           @click="changeBtn(btn)"
   :class="[{
     'current' : (btn == currentPage)
     },'pagebtn']"
-    :key="index">
+    :key="btn">
     {{btn}}
   </button>
   <button v-if=" pagebtnlist[pagebtns-1] !== pages-0" class="pagebtn">.....</button>
@@ -24,7 +24,7 @@
       data: function(){
           return {
             currentPage: 1,
-            pagebtnlist:[],
+            pagebtnlist:[]
           }
       },
       props:{
