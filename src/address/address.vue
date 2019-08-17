@@ -1,5 +1,4 @@
 
-
 <template>
   <div class="block-item">
     <label>选择地区:</label>
@@ -59,8 +58,8 @@ export default {
       this.$emit("update", data);
     }
    },
-  created() {
-    if (this.type === "edit" && this.defaultAddress) {
+  mounted() {
+    if (this.types === "edit" && this.defaultAddress) {
       this.lists = this.defaultAddress;
       this.provinceValue = this.lists.provinceValue;
       this.isInitVal = true;
@@ -76,7 +75,7 @@ export default {
       this.cityList = this.addressData.list[index].children;
       this.cityValue = -1;
       this.districtValue = -1;
-      if (this.type === "edit" && this.isInitVal) {
+      if (this.types === "edit" && this.isInitVal) {
         this.cityValue = parseInt(this.lists.cityValue);
       }
     },
@@ -88,7 +87,7 @@ export default {
       this.cityName = this.cityList[index].label;
       this.districtList = this.cityList[index].children;
       this.districtValue = -1;
-      if (this.type === "edit" && this.isInitVal) {
+      if (this.types === "edit" && this.isInitVal) {
         this.districtValue = parseInt(this.lists.districtValue);
         this.isInitVal = false;
       }

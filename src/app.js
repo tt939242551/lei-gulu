@@ -50,6 +50,11 @@ new Vue({
     loading3: false,
     page: 1,
     address: null,
+    zzz:{   
+        provinceValue: 110000,
+        cityValue: 110100,
+        districtValue: 110101,
+    }
   },
   methods:{
     xxx(page){

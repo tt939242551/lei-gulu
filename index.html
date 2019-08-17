@@ -107,7 +107,7 @@
     {{page}}
   </div>
   <div class="box">
-    <g-address @update="yyy"></g-address>
+    <g-address @update="yyy" types="edit" :default-address="zzz"></g-address>
     <span v-if="address">{{address.provinceName}}{{address.cityName}}{{address.districtName}}</span>
   </div>
   <div class="box" style="margin: 100px">
