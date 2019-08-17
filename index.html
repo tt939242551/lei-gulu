@@ -102,6 +102,10 @@
       <g-collapse-item title="标题3" :name="3">内容3</g-collapse-item>
     </g-collapse>
   </div>
+  <div class="box">
+    <g-paginator @handle="xxx" pagebtns="7" pages="50"></g-paginator>
+    {{page}}
+  </div>
   <div class="box" style="margin-top: 100px">
     <g-popover position="bottom">
       <template slot="content" slot-scope="{close}">
@@ -132,6 +136,7 @@
       <g-button>点我</g-button>
     </g-popover>
   </div>
+  
    
   </div>
   <script src="./src/app.js"></script>

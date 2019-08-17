@@ -18,6 +18,7 @@ import TabsPane from './tabs/tabs-pane'
 import Collapse from './collapse/collapse'
 import CollapseItem from './collapse/collapse-item'
 import Popover from './popover'
+import Paginator from './paginator'
 
 Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
@@ -38,12 +39,18 @@ Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-popover', Popover)
-
+Vue.component('g-paginator', Paginator)
 new Vue({
   el:"#app",
   data: {
     loading1: false,
     loading2: true,
     loading3: false,
+    page: 1
   },
+  methods:{
+    xxx(page){
+      this.page = page
+    }
+  }
 })
