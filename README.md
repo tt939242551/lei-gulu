@@ -18,7 +18,7 @@ IE 8 及以上浏览器都支持此样式。
 yarn add lei-gulu-1
 ```
 ```
-npm i --save lei-gulu-1
+npm install --save lei-gulu-1
 ```
 ### 引入 gulu
 ```
