@@ -11,10 +11,9 @@ describe('Address', () => {
     expect(Address).to.exist
   })
   const Constructor = Vue.extend(Address)
-  xit('接受 defaultAddress 属性', (done) => {
+  /* it('接受 defaultAddress 属性', (done) => {
     const vm = new Constructor({
       propsData: {
-        types: "edit",
         defaultAddress: {
           provinceValue: 110000,
           cityValue: 110100,
@@ -23,7 +22,7 @@ describe('Address', () => {
       }
     }).$mount()
     setTimeout(() => {
-      console.log(vm.$data)
+      console.log(vm.$data)     
       expect(vm.provinceName).to.eq("北京市")
       expect(vm.cityName).to.eq("市辖区")
       expect(vm.districtName).to.eq("东城区")
@@ -54,5 +53,5 @@ describe('Address', () => {
     })
     vm.$el.remove()
     vm.$destroy()
-  })
+  }) */
 })

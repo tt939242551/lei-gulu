@@ -35,18 +35,10 @@ export default {
       provinceName: "",
       cityName: "",
       districtName: "",
-      lists: null,
       isInitVal: false
     };
   },
   props: {
-    types: {
-      type: String,
-      default: "add",
-      validator(value) {
-        return value === "add" || value === "edit";
-      }
-    },
     defaultAddress: {
       type: Object
     }
@@ -58,10 +50,9 @@ export default {
       this.$emit("update", data);
     }
    },
-  mounted() {
-    if (this.types === "edit" && this.defaultAddress) {
-      this.lists = this.defaultAddress;
-      this.provinceValue = this.lists.provinceValue;
+  created() {
+    if (this.defaultAddress) {
+      this.provinceValue = this.defaultAddress.provinceValue;
       this.isInitVal = true;
     }
   },
@@ -75,8 +66,8 @@ export default {
       this.cityList = this.addressData.list[index].children;
       this.cityValue = -1;
       this.districtValue = -1;
-      if (this.types === "edit" && this.isInitVal) {
-        this.cityValue = parseInt(this.lists.cityValue);
+      if (this.defaultAddress && this.isInitVal) {
+        this.cityValue = parseInt(this.defaultAddress.cityValue);
       }
     },
     cityValue(val) {
@@ -87,8 +78,8 @@ export default {
       this.cityName = this.cityList[index].label;
       this.districtList = this.cityList[index].children;
       this.districtValue = -1;
-      if (this.types === "edit" && this.isInitVal) {
-        this.districtValue = parseInt(this.lists.districtValue);
+      if (this.defaultAddress && this.isInitVal) {
+        this.districtValue = parseInt(this.defaultAddress.districtValue);
         this.isInitVal = false;
       }
     },
@@ -133,7 +124,7 @@ export default {
 
 .select-group select {
   display: inline-block;
-  width: 130px;
+  width: 100px;
   font-size: 13px;
   border-radius: 4px;
   border: 1px solid #999;
