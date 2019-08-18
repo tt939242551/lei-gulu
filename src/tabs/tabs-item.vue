@@ -27,7 +27,7 @@
     },
     methods: {
       onClick () {
-        this.eventBus && this.eventBus.$emit('update:selected', this.name, this)
+        this.eventBus && this.eventBus.$emit('update:selected', this.name, this)  
       }
     }
   }

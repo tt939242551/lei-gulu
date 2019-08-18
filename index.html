@@ -67,7 +67,9 @@
       </g-button-group>
     </div>
     <div class="box"> 
-      <g-tabs :selected="1">
+      <g-tabs :selected.sync="tabsName">
+      <!-- <g-tabs :selected="tabsName" @update:selected="tabsName = $event"> -->
+        {{tabsName}}
         <g-tabs-head>
           <template slot="actions">
             <g-button>设置</g-button>
@@ -107,8 +109,8 @@
     {{page}}
   </div>
   <div class="box">
-    <g-address @update="yyy" :default-address="zzz"></g-address>
-    <span v-if="address">{{address.provinceName}}{{address.cityName}}{{address.districtName}}</span>
+    <g-address  :default-address.sync="zzz"></g-address>
+    <div style="margin-top: 20px">{{zzz}}</div>
   </div>
   <div class="box" style="margin: 100px">
     <g-popover position="top">

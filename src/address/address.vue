@@ -47,7 +47,7 @@ export default {
     add() {
       let { provinceValue, cityValue, districtValue, provinceName, cityName, districtName} = this;
       let data = { provinceValue, cityValue, districtValue, provinceName, cityName, districtName };
-      this.$emit("update", data);
+      this.$emit("update:default-address", data);
     }
    },
   created() {
@@ -109,7 +109,7 @@ export default {
 }
  .block-item select {
   display: table-cell;
-  padding: 4px 0 7px 4px;
+  padding: 6px 0 9px 5px;
   margin-right: 16px;
   font-size: 14px
 }

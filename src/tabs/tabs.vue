@@ -24,6 +24,9 @@
       }
     },
     mounted () {
+      this.eventBus.$on('update:selected', (name) => {
+          this.$emit('update:selected',name)
+        })
       if (this.$children.length === 0) {
         console && console.warn &&
         console.warn('tabs的子组件应该是tabs-head和tabs-body，但你没有写子组件')

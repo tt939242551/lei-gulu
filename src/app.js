@@ -49,7 +49,7 @@ new Vue({
     loading2: true,
     loading3: false,
     page: 1,
-    address: null,
+    tabsName: 2,
     zzz:{   
         provinceValue: 110000,
         cityValue: 110100,
@@ -60,8 +60,5 @@ new Vue({
     xxx(page){
       this.page = page
     },
-    yyy(data){
-      this.address = data
-    }
   }
 })
