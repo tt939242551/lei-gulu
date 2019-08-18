@@ -13,8 +13,8 @@ npm install lei-gulu-1
 
 ## 引入 gulu
 ```
-import {Button,Icon} from 'lei-gulu-test-1'
-import 'lei-gulu-test-1/dist/index.css'
+import {Button,Icon} from 'lei-gulu-1'
+import 'lei-gulu-1/dist/index.css'
 
 export default {
   name: 'app',
