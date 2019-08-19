@@ -1,6 +1,6 @@
 {
   "name": "lei-gulu-1",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "我的UI框架",
   "main": "dist/index.js",
   "repository": "git@github.com:tt939242551/lei-gulu.git",
