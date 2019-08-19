@@ -24,10 +24,10 @@
 </script>
 <style  scoped>
 .paginator > section{
-margin: 70px 0 40px;
+margin:70px 0 40px;
 }
 .paginator pre {
-  margin-top: 70px;
+  margin-top: 76px;
 }
 
 </style>

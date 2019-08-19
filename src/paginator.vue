@@ -2,7 +2,9 @@
 <div class="pagination">
   <button @click="firstbtn">首页</button>
   <button @click="prevbtn">上一页</button>
-  <button v-if="pagebtnlist[0]!==1" class="pagebtn">.....</button>
+  <transition name="first">
+    <button v-if="pagebtnlist[0]!==1" class="pagebtn">.....</button>
+  </transition>
   <button v-for="btn in pagebtnlist"
           @click="changeBtn(btn)"
   :class="[{
@@ -11,7 +13,9 @@
     :key="btn">
     {{btn}}
   </button>
-  <button v-if=" pagebtnlist[pagebtns-1] !== pages-0" class="pagebtn">.....</button>
+  <transition name="last">
+   <button v-if=" pagebtnlist[pagebtns-1] !== pages-0" class="pagebtn">.....</button>
+  </transition>
   <button @click="nextbtn">下一页</button>
   <button @click="lastbtn">末页</button>
 </div>
@@ -124,5 +128,21 @@
   .current {
     color: white;
     background-color: #3485fb
+  }
+  .first-leave-active,.first-enter-active{
+      transition: all .4s;
+       opacity: 0; 
+    }
+   .first-leave-to,.first-enter{
+    margin-left: -48px;
+   
+  }
+  .last-leave-active,.last-enter-active{
+      transition: all .4s;
+       opacity: 0; 
+    }
+   .last-leave-to,.last-enter{
+    margin-left: -48px;
+    
   }
 </style>

@@ -4,7 +4,8 @@
   </div>
 </template>
 <script>
-  export default {
+
+export default {
     name: 'GuluButtonGroup',
     mounted () {
       for (let node of this.$el.children) {

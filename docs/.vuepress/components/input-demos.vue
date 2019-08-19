@@ -27,11 +27,14 @@
   }
 </script>
 <style scoped>
+.input{
+  margin-top: 60px;
+}
 .input>div{
   margin: 30px 0;
 }
 pre{
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 </style>

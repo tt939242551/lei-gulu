@@ -70,10 +70,10 @@
 </script>
 <style scoped>
 .popover{
-margin-top: 30px;
+margin-top: 40px;
 }
 .popover pre {
-  margin-top: 64px;
+  margin-top: 80px;
 }
 
 </style>

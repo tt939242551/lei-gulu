@@ -10,16 +10,16 @@
         <g-footer>footer</g-footer>
       </g-layout>
     </section>    
-    <section>
-      <g-layout>
+    
+    <g-layout>
         <g-sider>sider</g-sider>     
         <g-layout>
           <g-header>header</g-header>
           <g-content>content</g-content>
           <g-footer>footer</g-footer>
         </g-layout>
-      </g-layout>
-    </section>
+    </g-layout>
+    
     
     <pre><code>{{content}}</code></pre>
   </div>
@@ -68,9 +68,9 @@
   border: 1px solid red;
 }
 .layout>section{
-margin-top: 50px;
+margin: 70px 0 40px;
 }
 .layout pre {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 </style>

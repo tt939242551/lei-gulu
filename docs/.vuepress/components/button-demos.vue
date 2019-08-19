@@ -19,7 +19,8 @@ import ButtonGroup from "../../../src/button-group";
 
 export default {
   components: {
-    "g-button": Button
+    "g-button": Button,
+    "g-button-group": ButtonGroup,
   },
   data() {
     return {
@@ -51,12 +52,12 @@ export default {
 <style scoped>
 *,*::before,*::after{box-sizing: border-box;}
 .buttons{
-  margin: 40px 0;
+  margin: 70px 0;
 }
 .buttons>button{
   margin-right: 20px;
 }
 .buttons > pre{
-  margin: 40px 0;
+  margin: 70px 0;
 }
 </style>

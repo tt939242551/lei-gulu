@@ -90,7 +90,7 @@
   border: 1px solid red;
 }
 .grid{
-  margin: 50px 0;
+  margin: 70px 0;
 
 }
 .grid pre {
