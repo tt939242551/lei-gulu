@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="popover">
      <g-popover position="top">
       <template slot="content" slot-scope="{close}">
-        <div>popover内容 <a href="http://qq.com">看新网</a></div>
+        <div>popover内容</div>
       </template>
       <g-button>点我</g-button>
     </g-popover>
@@ -39,9 +39,9 @@
     data () {
       return {
         content: `
-       <g-popover position="top">
+    <g-popover position="top">
       <template slot="content" slot-scope="{close}">
-        <div>popover内容 <a href="http://qq.com">看新网</a></div>
+        <div>popover内容</div>
       </template>
       <g-button>点我</g-button>
     </g-popover>
@@ -63,9 +63,17 @@
       </template>
       <g-button>hover我</g-button>
     </g-popover>
-    <pre><code>{{content}}</code></pre>
-      `.replace(/\t+| +/g, '').trim()
+    `
       }
     }
   }
 </script>
+<style scoped>
+.popover{
+margin-top: 30px;
+}
+.popover pre {
+  margin-top: 64px;
+}
+
+</style>

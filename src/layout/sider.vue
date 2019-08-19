@@ -1,8 +1,7 @@
 <template>
   <transition name="slide">
     <div class="sider" v-if="visible">
-      <slot></slot>
-      <button @click="visible=!visible">{{msg}}</button>
+      <slot></slot>      
     </div>
   </transition>
 </template>
@@ -12,7 +11,6 @@
     data () {
       return {
         visible: true,
-        msg:"x"
       }
     },
     methods: {}

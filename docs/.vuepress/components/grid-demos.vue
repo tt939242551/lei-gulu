@@ -1,50 +1,37 @@
 <template>
-  <div>
+  <div class="grid">
       <g-row gutter="20" >
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
+        offset="3"
+        >1</g-col>
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
         offset="1"
-        ></g-col>
+        >2</g-col>
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
         offset="2"
-        ></g-col>
+        >3</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="2"
+        >4</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="1"
+        >5</g-col>
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
         offset="3"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        offset="4"
-        ></g-col>
-      </g-row>
-      <div class="box">
-        <g-row  gutter="20">
-        <g-col class="item" span="6"  
-        :ipad="{span:5}"
-        :narrow-pc="{span:4}" 
-        :pc="{span:3}"
-        :wide-pc="{span:2}"
-        ></g-col>
-        <g-col class="item" span="17" 
-        :ipad="{span:18}"
-        :narrow-pc="{span:19}" 
-        :pc="{span:20}"
-        :wide-pc="{span:21}" offset="1"></g-col>
-       </g-row>
-      </div>    
+        >6</g-col>
+      </g-row>   
     <pre><code>{{content}}</code></pre>
   </div>
 </template>
@@ -61,56 +48,52 @@
     data () {
       return {
         content: `
-       <g-row gutter="20" >
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        offset="1"
-        ></g-col>
-        <g-col class="item" span="24"
-        :ipad="{span:12}" 
-        :pc="{span:8}"
-        offset="2"
-        ></g-col>
+      <g-row gutter="20" >
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
         offset="3"
-        ></g-col>
+        >1</g-col>
         <g-col class="item" span="24"
         :ipad="{span:12}" 
         :pc="{span:8}"
-        offset="4"
-        ></g-col>
+        offset="1"
+        >2</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="2"
+        >3</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="2"
+        >4</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="1"
+        >5</g-col>
+        <g-col class="item" span="24"
+        :ipad="{span:12}" 
+        :pc="{span:8}"
+        offset="3"
+        >6</g-col>
       </g-row>
-      <g-row  gutter="20">
-        <g-col class="item" span="6"  
-        :ipad="{span:5}"
-        :narrow-pc="{span:4}" 
-        :pc="{span:3}"
-        :wide-pc="{span:2}"
-        ></g-col>
-        <g-col class="item" span="17" 
-        :ipad="{span:18}"
-        :narrow-pc="{span:19}" 
-        :pc="{span:20}"
-        :wide-pc="{span:21}" offset="1"></g-col>
-      </g-row>
-      `.replace(/\t+| +/g, '').trim()
+      `
       }
     }
   }
 </script>
-<style scoped>
-.box{
-  margin-top: 100px;
+<style>
+.grid div{
+  border: 1px solid red;
+}
+.grid{
+  margin: 50px 0;
+
+}
+.grid pre {
+  margin-top: 80px;
 }
 </style>

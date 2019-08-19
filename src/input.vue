@@ -6,7 +6,7 @@
       @focus="$emit('focus', $event.target.value)"
       @blur="$emit('blur', $event.target.value)"
     >  
-    <icon v-if="state===false&&state!==''" name="error" class="icon"></icon>
+    <icon v-if="error&&state===false&&state!==''" name="error" class="icon"></icon>
     <icon v-if="state===true" name="pass" class="icon"></icon>
     <div v-if="error" class="errorMessage" :class="{'under':errorPosition==='bottom'}">{{error}}</div>
     
@@ -65,7 +65,8 @@
       > input { border-color: $red; }
     }
     .icon-error { fill: $red; }
-    .errorMessage { color: $red; }
-    > .under {position: absolute;top: $height+2px;}
+    .errorMessage { color: $red; 
+    &.under {position: absolute;top: $height+2px;}
+    }
   }
 </style>

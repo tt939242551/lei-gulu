@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <g-input></g-input>
-    <g-input  error="密码太短"></g-input>
-    <g-input :state="true"></g-input>
-    <g-input error-position="bottom" :state="false" error="密码太短"></g-input>
+  <div class="input">
+    <div><g-input></g-input></div>
+    <div><g-input  error="密码太短"></g-input></div>
+    <div><g-input :state="true"></g-input></div>
+    <div><g-input error-position="bottom" error="密码太短"></g-input></div> 
     <pre><code>{{content}}</code></pre>
   </div>
 </template>
@@ -17,9 +17,21 @@
     data () {
       return {
         content: `
-  
+        <g-input></g-input>
+        <g-input  error="密码太短"></g-input>
+        <g-input :state="true"></g-input>
+        <g-input error-position="bottom" error="密码太短"></g-input>
       `.replace(/\t+| +/g, '').trim()
       }
     }
   }
 </script>
+<style scoped>
+.input>div{
+  margin: 30px 0;
+}
+pre{
+  margin-top: 50px;
+}
+
+</style>

@@ -88,7 +88,7 @@
       > .icon {margin: .3em;}
     }
   }
-  .disabled { background-color: $button-disabled-bg ;
+  .disabled { background-color: $button-disabled-bg ;color: #999;
     &:hover { border-color: $border-color; }
     &:active { background-color: $button-disabled-bg; }
   }

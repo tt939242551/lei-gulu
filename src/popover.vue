@@ -89,8 +89,8 @@
         })
       },
       close () {
-        this.visible = false
-        document.removeEventListener('click', this.onClickDocument)
+         this.visible = false
+         document.removeEventListener('click', this.onClickDocument)
       },
       onClick (event) {
         if (this.$refs.triggerWrapper.contains(event.target)) {
@@ -106,7 +106,7 @@
 </script>
 
 <style scoped lang="scss">
-  $border-color: #333;
+  $border-color: #666;
   $border-radius: 4px;
   .popover {
     display: inline-block;
@@ -200,7 +200,7 @@
     }
   }
   .contents-enter-active, .contents-leave-active {
-    transition: opacity .5s;
+    transition: opacity .3s;
   }
   .contents-enter, .contents-leave-to  {
     opacity: 0;

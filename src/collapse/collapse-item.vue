@@ -61,7 +61,7 @@
     &:last-child {
       > .title:last-child { border-bottom-left-radius: $border-radius; border-bottom-right-radius: $border-radius; }
     }
-    > .content { padding: 8px;height:  $content-height; 
+    > .content { display: flex; align-items: center; padding: 0 8px;height:  $content-height; 
     }
   }
    .content-leave-active ,.content-enter-active{

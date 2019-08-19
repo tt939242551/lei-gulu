@@ -22,6 +22,7 @@
 
 <script>
 import addressData from "./address.json";
+import Button from '../button'
 
 export default {
   data() {
@@ -37,6 +38,9 @@ export default {
       districtName: "",
       isInitVal: false
     };
+  },
+  components: {
+    "g-button": Button
   },
   props: {
     defaultAddress: {

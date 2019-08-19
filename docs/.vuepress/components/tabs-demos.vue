@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="tabs">
     <g-tabs :selected.sync="tabsName">
-        {{tabsName}}
+        你选择的是{{tabsName}}
         <g-tabs-head>
           <template slot="actions">
             <g-button>设置</g-button>
@@ -54,7 +54,7 @@
       return {
         content: `
      <g-tabs :selected.sync="tabsName">
-        {{tabsName}}
+        你选择的是{{tabsName}}
         <g-tabs-head>
           <template slot="actions">
             <g-button>设置</g-button>
@@ -81,9 +81,18 @@
           </g-tabs-pane>
         </g-tabs-body>
     </g-tabs>
-      `.replace(/\t+| +/g, '').trim(),
+      `,
       tabsName: 2,
       }
     }
   }
 </script>
+<style scoped>
+.tabs{
+margin-top: 64px;
+}
+.tabs pre {
+  margin-top: 64px;
+}
+
+</style>

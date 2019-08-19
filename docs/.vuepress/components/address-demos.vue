@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <g-address></g-address>
+  <div class="address">
+    <section><g-address></g-address></section>
     <g-address :default-address.sync="address"></g-address>
+    <span >你选择的地址是:{{address.provinceName}}{{address.cityName}}{{address.districtName}}</span>
     <pre><code>{{content}}</code></pre>
   </div>
 </template>
@@ -17,6 +18,7 @@
         content: `
        <g-address></g-address>
        <g-address :default-address.sync="address"></g-address>
+       你选择的地址是:{{address.provinceName}}{{address.cityName}}{{address.districtName}}
 
         address:{   
         provinceValue: 110000,
@@ -33,3 +35,15 @@
     }
   }
 </script>
+<style scoped>
+.address > section{
+margin: 70px 0 40px;
+}
+.address pre {
+  margin-top: 70px;
+}
+.address span {
+  line-height: 40px;
+}
+
+</style>

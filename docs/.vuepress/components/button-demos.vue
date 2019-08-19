@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="buttons">
     <g-button :number="9">按钮</g-button>
     <g-button :number="6" icon="setting"></g-button>
     <g-button disabled>按钮</g-button>
@@ -43,10 +43,20 @@ export default {
         <g-button>更多</g-button>
         <g-button icon="right" icon-position="right">下一页</g-button>
       </g-button-group>
-      `
-        .replace(/\t+| +/g, "")
-        .trim()
+      `       
     };
   }
 };
 </script>
+<style scoped>
+*,*::before,*::after{box-sizing: border-box;}
+.buttons{
+  margin: 40px 0;
+}
+.buttons>button{
+  margin-right: 20px;
+}
+.buttons > pre{
+  margin: 40px 0;
+}
+</style>
