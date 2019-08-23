@@ -64,8 +64,9 @@
   }
 </script>
 <style>
-.layout div{
+ .header,.content,.footer,.sider{
   border: 1px solid red;
+  padding: 16px;
 }
 .layout>section{
 margin: 70px 0 40px;
