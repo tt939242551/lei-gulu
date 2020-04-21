@@ -64,7 +64,7 @@
   }
 </script>
 <style>
- .header,.content,.footer,.sider{
+.layout .header,.layout .content,.footer,.sider{
   border: 1px solid red;
   padding: 16px;
 }
